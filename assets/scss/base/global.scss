@@ -1,0 +1,218 @@
+* {
+  font-family: $font;
+  font-weight: 400;
+}
+.container {
+  max-width: 1284px;
+  @include responsive-xl() {
+    max-width: 700px;
+  }
+}
+.large_container {
+  max-width: 1394px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px;
+  @include responsive-xl() {
+    padding: 0 15px;
+  }
+}
+.container-fluid {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px;
+  @include responsive-xl() {
+    padding: 0 15px;
+  }
+}
+.slick-frame {
+  visibility: hidden;
+}
+
+.main_img {
+  width: 100%;
+  display: none;
+  &--no-hide {
+    display: block;
+  }
+  @include responsive-md() {
+    display: block;
+  }
+}
+.slick-frame.slick-initialized {
+  visibility: visible;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.ddown {
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+.text {
+  color: #020202;
+  @include fontSize(16px);
+  font-weight: 400;
+  line-height: 1.4;
+  @include responsive-md() {
+    text-align: center;
+  }
+  .small {
+    color: #7f7b7b;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+    @include fontSize(18px);
+    letter-spacing: 0.75px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #020202;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom: 16px;
+  }
+  strong {
+    font-weight: 500;
+  }
+}
+
+.gray_background {
+  background-color: $gray;
+}
+
+.home_gray {
+  padding: 20px 0 30px;
+}
+
+.home_about {
+  padding-bottom: 20px;
+}
+
+.residential,
+.press {
+  margin-bottom: 30px;
+}
+
+.portfolio_gray {
+  padding: 2px 0;
+  margin-bottom: 30px;
+}
+
+h1 {
+  @include fontSize(29px);
+  letter-spacing: 0.75px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 22px 0;
+  &.ddown-arrow {
+    margin-bottom: 12px;
+  }
+  @include responsive-md() {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}
+p {
+  margin-bottom: 1.2rem;
+}
+.main_button_holder {
+  text-align: center;
+  margin: 20px 0 16px;
+  @include responsive-md() {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+.bottom_line {
+  height: 1px;
+  background-color: #d77858;
+}
+.main_button {
+  color: #171717;
+  @include fontSize(13px);
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: solid 2px #171717;
+  &:hover {
+    color: #171717;
+    text-decoration: none;
+  }
+  &--standart_case {
+    text-transform: initial;
+  }
+}
+// instagram arrow fix
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  outline: 0 !important;
+}
+.insta-gallery-feed[data-feed_layout="carousel"] .swiper-button-next > i,
+.insta-gallery-feed[data-feed_layout="carousel"] .swiper-button-prev > i {
+  color: #d77858 !important;
+}
+.insta-gallery-feed .insta-gallery-actions .insta-gallery-button {
+  color: #171717 !important;
+  font-size: 14px !important;
+  font-size: 0.875rem !important;
+  background-color: #c8c2c2 !important;
+  font-weight: 400 !important;
+  display: inline-block !important;
+  padding: 16px 39px 14px !important;
+  border: solid 1px #c8c2c2 !important;
+  text-decoration: none !important;
+}
+.insta-gallery-feed[data-feed_layout="carousel"]
+  .swiper-pagination-bullet-active {
+  background-color: #d77858 !important;
+}
+.wpcf7-response-output {
+  border: none !important;
+  text-align: center;
+  font-size: 14px;
+}
+
+.instagram-gallery-feed {
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+
+.designs_image {
+  height: calc(100vh - 200px);
+  object-fit: cover;
+  @include responsive-md() {
+    height: auto;
+    min-height: 200px;
+  }
+}

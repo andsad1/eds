@@ -1,0 +1,23 @@
+{
+  "name": "npmdalykai",
+  "version": "1.0.0",
+  "description": "npm demo",
+  "scripts": {
+    "dev": "gulp devApp"
+  },
+  "author": "Andrius",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

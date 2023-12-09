@@ -1,0 +1,36 @@
+.fixed-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin-bottom: 34px;
+  @include responsive-lg() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive-md() {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__image {
+    display: block;
+    page-break-inside: avoid;
+    overflow: hidden;
+    &.horizontal {
+      grid-column: span 2;
+      @include responsive-lg() {
+        grid-column: auto;
+      }
+    }
+  }
+  img {
+    transition: transform ease-out 0.3s;
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    &:hover {
+      transform: scale(1.12);
+    }
+    @include responsive-md() {
+      height: auto;
+    }
+  }
+}

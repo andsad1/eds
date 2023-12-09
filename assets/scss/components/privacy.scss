@@ -1,0 +1,21 @@
+.bottom_privacy {
+  background-color: $gray;
+  padding: 20px 0 16px;
+  .privacy_holder {
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: 0px 15px;
+      font-size: 16px;
+      color: #000;
+      transition: all ease 0.2s;
+      &:hover {
+        opacity: 0.8;
+        text-decoration: none;
+      }
+      &:nth-child(2) {
+        border-left: 1px solid #d77858;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.journal_slider {
+  opacity: 0;
+    img {
+      height: 500px;
+      outline: 0;
+      width: auto;
+      margin-left: 4px;
+      margin-right: 4px;
+      @include responsive-xl() {
+        height: 400px !important;
+      }
+      @include responsive-lg() {
+        height: 300px !important;
+      }
+      @include responsive-md() {
+        height: 240px !important;
+      }
+    }
+    .slick-prev {
+      left: 10px;
+      width: 36px;
+      height: 36px;
+      z-index: 1;
+      opacity: 1;
+      transition: all ease 0.2;
+      @include responsive-md() {
+        left: 5px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .slick-next {
+      transition: all ease 0.2;
+      right: 10px;
+      width: 36px;
+      height: 36px;
+      z-index: 1;
+      opacity: 1;
+      @include responsive-md() {
+        right: 5px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .slick-next:before {
+      transition: all ease 0.2;
+      content: "";
+      background-image: url("../img/hero_right.svg");
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      top: 0;
+      opacity: 1;
+    }
+    .slick-prev:before {
+      transition: all ease 0.2;
+      content: "";
+      background-image: url("../img/hero_left.svg");
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      line-height: auto;
+      left: 0;
+      opacity: 1;
+      top: 0;
+      width: 36px;
+      height: 36px;
+    }
+  }
+  #our_process {
+    .journal_slider img {
+      height: 500px;
+      width: auto;
+      @include responsive-xl() {
+        height: 400px;
+      }
+      @include responsive-lg() {
+        height: 300px;
+      }
+      @include responsive-md() {
+        height: 240px;
+      }
+    }
+  }

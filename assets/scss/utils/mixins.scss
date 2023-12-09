@@ -1,0 +1,39 @@
+@mixin responsive-sm() {
+  @media all and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin responsive-md() {
+  @media all and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin responsive-lg() {
+  @media all and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin responsive-xl() {
+  @media all and (max-width: 1283px) {
+    @content;
+  }
+}
+@mixin responsive-xxl() {
+  @media all and (max-width: 1309px) {
+    @content;
+  }
+}
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: calc($size / 16px);
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}

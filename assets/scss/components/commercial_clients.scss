@@ -1,0 +1,41 @@
+.commercial_clients {
+  margin-top: 30px;
+  padding-top: 30px;
+  h2 {
+    @include fontSize(29px);
+    letter-spacing: 0.75px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 38px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @include responsive-md() {
+      display: block;
+    }
+    > div {
+      flex: 1;
+      text-align: center;
+      @include responsive-md() {
+        width: 100%;
+      }
+    }
+  }
+  a {
+    color: #171717;
+    @include fontSize(18px);
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: solid 2px #171717;
+    margin-bottom: 16px;
+    &:hover {
+      color: #171717;
+      text-decoration: none;
+    }
+    @include responsive-md() {
+      @include fontSize(16px);
+    }
+  }
+}

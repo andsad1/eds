@@ -1,0 +1,102 @@
+footer {
+  text-align: center;
+  padding-top: 38px;
+  .text {
+    margin-bottom: 20px;
+    @include responsive-md() {
+      margin-bottom: 80px;
+    }
+    h2 {
+      @include fontSize(16px);
+      line-height: 1;
+      margin-bottom: 2px;
+      letter-spacing: 0.8px;
+    }
+    p {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+  }
+  .footer_social {
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+    a {
+      text-decoration: none;
+    }
+    img {
+      width: 60px;
+      margin-right: -13px;
+    }
+    @include responsive-md() {
+      width: 100%;
+      text-align: center;
+      right: 0;
+    }
+  }
+}
+
+.footer_container {
+  position: relative;
+}
+
+#cookie {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.2;
+  padding: 8px 30px 8px;
+  @include responsive-md() {
+    font-size: 14px;
+    padding: 20px 15px;
+    text-align: center;
+  }
+  a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 0;
+    padding-top: 2px;
+    @include responsive-md() {
+      line-height: 1.4;
+    }
+  }
+  .cookie_button_holder {
+    @include responsive-md() {
+      text-align: center;
+    }
+  }
+  button {
+    background: transparent;
+    border: solid 2px #000;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 1;
+    padding: 8px 30px 8px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    outline: 0;
+    @include responsive-md() {
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+    &:hover {
+      text-decoration: none;
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+.cookie_row {
+  align-items: center;
+}

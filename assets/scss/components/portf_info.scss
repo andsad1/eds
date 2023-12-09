@@ -1,0 +1,32 @@
+.portf-info {
+  margin-left: auto;
+  width: 720px;
+  margin-bottom: 50px;
+  max-width: 100%;
+  &__row {
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #020202;
+    font-size: 16px;
+    color: #020202;
+    strong {
+      font-size: 14px;
+      width: 60%;
+    }
+    span,
+    a {
+      width: 40%;
+    }
+    &:first-child {
+      border-top: solid 1px #020202;
+    }
+    @include responsive-md() {
+      font-size: 14px;
+      strong {
+        font-size: 12px;
+      }
+    }
+  }
+}

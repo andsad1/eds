@@ -1,0 +1,42 @@
+@font-face {
+  font-family: NeueKabel;
+  src: url(./assets/fonts/neue/NeueKabel.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: NeueKabel;
+  src: url("./assets/fonts/neue/NeueKabel-Book.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: NeueKabel;
+  src: url("./assets/fonts/neue/NeueKabel-Medium.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: NeueKabel;
+  src: url("./assets/fonts/neue/NeueKabel-Bold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: NeueKabel;
+  src: url("./assets/fonts/neue/NeueKabel-ExtraBold.otf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: NeueKabel;
+  src: url(./assets/fonts/neue/NeueKabel-Light.otf);
+  font-weight: 300;
+}
+/* -------------------------------
+colors
+-------------------------------- */
+
+$gray: #f6f6f6;
+
+/* -------------------------------
+fonts
+-------------------------------- */
+$font: NeueKabel;

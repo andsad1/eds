@@ -1,0 +1,46 @@
+#our_process {
+  h1 {
+    @include responsive-md() {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.process {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    @include responsive-xl() {
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+  }
+  &__content {
+    text-align: left;
+    width: calc(50% - 35px);
+    margin-top: 16px;
+    @include responsive-xl() {
+      width: 100%;
+    }
+    h3 {
+      text-align: left;
+      @include fontSize(18px);
+      font-weight: 600;
+      margin-bottom: 20px;
+      @include responsive-md() {
+        text-align: center;
+      }
+    }
+  }
+  &__image {
+    display: block;
+    width: calc(50% - 35px);
+    @include responsive-xl() {
+      width: 100%;
+      margin-bottom: 20px;
+      order: -1;
+    }
+  }
+}
