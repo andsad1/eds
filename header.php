@@ -21,7 +21,7 @@
         <div class="header_holder row">
             <div class="logo_holder">
                 <a href="<?php echo get_home_url(); ?>">
-                    <img class="logo" src="<?php bloginfo('template_url'); ?>/assets/img/logo1.png" alt="editdesignstudio logo">
+                    <img class="logo" src="<?php bloginfo('template_url'); ?>/assets/img/logo.png" alt="editdesignstudio logo">
                 </a>
             </div>
             <div class="header_inner_row">

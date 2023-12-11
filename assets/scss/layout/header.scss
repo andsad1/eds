@@ -157,7 +157,8 @@
   }
 }
 .logo {
-  width: 183px;
+  width: 180px;
+  margin-top: 8px;
   transition: all ease 0.2s;
   @include responsive-xl() {
     width: 140px;

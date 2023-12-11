@@ -159,6 +159,9 @@
     height: 36px;
     top: 0;
     opacity: 1;
+    @include responsive-md() {
+      display: none;
+    }
   }
   .slick-prev:before {
     transition: all ease 0.2;
@@ -174,6 +177,9 @@
     top: 0;
     width: 36px;
     height: 36px;
+    @include responsive-md() {
+      display: none;
+    }
   }
 }
 
