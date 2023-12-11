@@ -10,6 +10,24 @@ jQuery(document).ready(function ($) {
     cssEase: 'linear',
     pauseOnHover: false
   });
+  var $status = $('.pagingInfo');
+  $('.furniture_slider').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.text(i + '/' + slick.slideCount);
+  });
+
+  $('.furniture_slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 600,
+    arrows: true,
+    autoplay: false,
+    fade: true,
+    cssEase: 'linear',
+    pauseOnHover: false
+  });
+
+  
   
   $('.clients_slider').slick({
     dots: false,

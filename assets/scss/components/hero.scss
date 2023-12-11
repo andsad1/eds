@@ -10,7 +10,7 @@
     height: calc(100vh - 194px);
     @include responsive-md() {
       height: calc(100vh - 176px);
-      height: calc(100dvh - 176px);
+      height: calc(100svh - 176px);
     }
   }
   .slick-prev {

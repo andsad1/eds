@@ -38,16 +38,20 @@
 .about_us_columns {
   display: flex;
   text-align: justify;
+  flex-wrap: wrap;
   @include responsive-md() {
     display: block;
   }
-  > div {
-    flex: 1;
+  .text {
+    width: calc(50% - 40px);
     @include responsive-md() {
       width: 100%;
     }
   }
-  gap: 80px;
+  .full-text {
+    width: 100%;
+  }
+  gap: 40px 80px;
   @include responsive-xl() {
     gap: 40px;
   }

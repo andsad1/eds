@@ -4,6 +4,7 @@
 
 .furniture-top {
   margin-bottom: 40px;
+  position: relative;
 }
 
 .furniture_row {
@@ -25,8 +26,8 @@
 
 .single-furniture-tilte {
   margin: 50px 0;
-  @include responsive-lg() {
-    margin: 24px 0;
+  @include responsive-md() {
+    margin: 40px 0 !important;
   }
 }
 
@@ -102,4 +103,99 @@
   background: transparent;
   cursor: pointer;
   outline: 0;
+}
+
+.furniture_slider {
+  .furniture_img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 194px);
+    @include responsive-md() {
+      height: calc(100vh - 244px);
+      height: calc(100svh - 244px);
+    }
+  }
+  .slick-prev {
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity ease 0.2;
+    @include responsive-md() {
+      left: 5px;
+      display: none;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .slick-next {
+    transition: opacity ease 0.2;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    z-index: 1;
+    opacity: 1;
+    @include responsive-md() {
+      right: 5px;
+      display: none;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .slick-next:before {
+    transition: all ease 0.2;
+    content: "";
+    background-image: url("../img/hero_right.svg");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    top: 0;
+    opacity: 1;
+  }
+  .slick-prev:before {
+    transition: all ease 0.2;
+    content: "";
+    background-image: url("../img/hero_left.svg");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    line-height: auto;
+    left: 0;
+    opacity: 1;
+    top: 0;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.pagingInfo {
+  position: absolute;
+  right: 70px;
+  font-size: 20px;
+  bottom: 20px;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px 0px black;
+  @include responsive-md() {
+    bottom: 14px;
+    right: 40px;
+  }
+}
+
+.furniture-ddown {
+  display: none;
+  @include responsive-md() {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }

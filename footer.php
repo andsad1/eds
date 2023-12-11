@@ -8,17 +8,17 @@
                     <?php the_field('footer_text', 'options'); ?>
                     <div class="footer_social">
                         <a rel="noreferrer" target="_blank" href="<?php the_field('facebook_link', 'options'); ?>">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/facebook.png" alt="facebook">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/facebook.svg" alt="facebook">
                         </a>
                         <a rel="noreferrer" target="_blank" href="<?php the_field('instagram_link', 'options'); ?>">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/instagram.png" alt="instagram">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/instagram.svg" alt="instagram">
 
                         </a>
                         <a rel="noreferrer" target="_blank" href="<?php the_field('linked_in_link', 'options'); ?>">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/linkedin.png" alt="linkedin">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/linkedin.svg" alt="linkedin">
                         </a>
                         <a rel="noreferrer" target="_blank" href="<?php the_field('pinterest_link', 'options'); ?>">
-                            <img src="<?php bloginfo('template_url'); ?>/assets/img/pinterest.png" alt="pinterest">
+                            <img src="<?php bloginfo('template_url'); ?>/assets/img/pinterest.svg" alt="pinterest">
                         </a>
                     </div>
                 </div>

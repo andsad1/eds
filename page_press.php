@@ -20,12 +20,19 @@
                 <img class="ddown" src="<?php bloginfo('template_url'); ?>/assets/img/ddown.svg" alt="editdesignstudio">
                 <div class="awards_row">
                     <?php while (have_rows('awards')) : the_row(); ?>
-                        <a href="<?php the_sub_field('link'); ?>" target="_blank" rel="nofollow">
+                        <?php if (get_sub_field('link')) : ?>
+                            <a href="<?php the_sub_field('link'); ?>" target="_blank" rel="nofollow">
+                                <article class="awards_item">
+                                    <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>" />
+                                    <h3><?php the_sub_field('title'); ?></h3>
+                                </article>
+                            </a>
+                        <?php else : ?>
                             <article class="awards_item">
                                 <img src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>" />
                                 <h3><?php the_sub_field('title'); ?></h3>
                             </article>
-                        </a>
+                        <?php endif; ?>
                     <?php endwhile; ?>
                 </div>
                 <h1 class="people_h1">People we Collaborate with</h1>

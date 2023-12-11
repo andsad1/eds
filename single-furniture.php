@@ -4,16 +4,18 @@
         <?php $images = get_field('gallery'); ?>
         <main class="single_portfolio">
             <section class="container-fluid furniture-top">
-                <div class="hero_slider">
+                <div class="furniture_slider">
                     <?php foreach ($images as $image) : ?>
-                        <div class="hero_slide">
-                            <img class="hero_img lazy" src="<?php echo esc_url($image['sizes']['very_big']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <div class="furniture_slide">
+                            <img class="furniture_img lazy" src="<?php echo esc_url($image['sizes']['very_big']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                         </div>
                     <?php endforeach; ?>
                 </div>
+                <div class="pagingInfo"></div>
             </section>
             <div class="container">
                 <h1 class="single-furniture-tilte"><?php the_title(); ?></h1>
+                <img class="ddown furniture-ddown" src="<?php bloginfo('template_url'); ?>/assets/img/ddown.svg" alt="editdesignstudio">
                 <div class="furniture_row">
                     <div class="text">
                         <?php the_content(); ?>

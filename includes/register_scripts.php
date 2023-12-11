@@ -14,7 +14,7 @@ function wpt_theme_js()
     wp_register_script('wow_js', get_template_directory_uri() . '/assets/libs/wow/wow.min.js', array(), null, true);
     wp_enqueue_script('wow_js');
     // App
-    wp_register_script('app_js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '0.5', true);
+    wp_register_script('app_js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), '0.6', true);
     wp_enqueue_script('app_js');
 }
 

@@ -18,14 +18,20 @@
                             <?php the_content(); ?>
                         </div>
                         <img class="ddown" src="<?php bloginfo('template_url'); ?>/assets/img/ddown.svg" alt="editdesignstudio">
-                        <div class="about_us_columns">
-                            <div class="text">
-                                <?php the_field('left_content'); ?>
+                        <?php if (have_rows('people')) : ?>
+                            <?php $count = count(get_field('people')); ?>
+                            <div class="about_us_columns">
+                                <?php while (have_rows('people')) : the_row(); ?>
+                                    <?php
+                                    $rowIndex =  get_row_index();
+                                    $isFull = $count == $rowIndex && $rowIndex % 2 !== 0 ? true : false;
+                                    ?>
+                                    <div class="text <?php if ($isFull) : ?> full-text <?php endif ?>">
+                                        <?php the_sub_field('text'); ?>
+                                    </div>
+                                <?php endwhile; ?>
                             </div>
-                            <div class="text">
-                                <?php the_field('right_content'); ?>
-                            </div>
-                        </div>
+                        <?php endif; ?>
                         <?php $badge = get_field('badge'); ?>
                         <?php if ($badge) : ?>
                             <img class="about_us_badge_image" src="<?php echo $badge['sizes']['medium']; ?>" alt="pro member" />
